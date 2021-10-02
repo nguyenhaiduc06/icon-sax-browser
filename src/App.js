@@ -7,7 +7,7 @@ import capitalize from './helpers/capitalize';
 
 function App() {
   const [search, setSearch] = useState('');
-  const [iconType, setIconType] = useState(IconTypes.twotone);
+  const [iconType, setIconType] = useState(IconTypes.linear);
 
   return (
     <div class="bg-gray-100 min-h-screen">
