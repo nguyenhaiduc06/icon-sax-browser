@@ -8,7 +8,7 @@ export default function SelectIconType({ iconType, setIconType }) {
       {Object.keys(IconTypes).map((key, index) => (
         <div
           key={index}
-          class={`mx-2 py-2 px-4 rounded-xl cursor-pointer ${iconType == key ? 'font-semibold bg-white' : ''}`}
+          class={`mx-2 py-2 px-4 rounded-xl cursor-pointer ${iconType === key ? 'font-semibold bg-white' : ''}`}
           onClick={() => setIconType(key)}
         >
           {capitalize(key)}
