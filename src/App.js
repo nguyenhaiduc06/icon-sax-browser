@@ -1,11 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
-import NavBar from './components/NavBar';
-import Icon from './components/Icon';
 import { IconNames, IconTypes } from './constants/Icons';
-import capitalize from './helpers/capitalize';
 import Search from './components/Search';
 import SelectIconType from './components/SelectIconType';
+import Icon from './components/Icon';
+import NavBar from './components/NavBar';
 
 function App() {
   const [search, setSearch] = useState('');
