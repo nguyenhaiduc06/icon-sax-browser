@@ -1,10 +1,8 @@
 import React from 'react';
-import { IconTypes } from '../constants/Icons';
-import capitalize from '../helpers/capitalize';
 
 export default function Search({ search, setSearch, iconType, setIconType }) {
   return (
-    <div class="flex flex-row items-center max-w-screen-lg m-auto bg-white px-4 py-2 rounded mt-4">
+    <div class="flex flex-row items-center max-w-screen-sm m-auto bg-white px-4 py-2 rounded-xl mt-4">
       <img
         src={require(`../assets/linear/search-normal-1.svg`).default}
         alt="search-icon"
@@ -15,7 +13,6 @@ export default function Search({ search, setSearch, iconType, setIconType }) {
         placeholder="Search"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        style={{flex: 2}}
       />
       {search.length > 0 && (
         <img
@@ -25,11 +22,6 @@ export default function Search({ search, setSearch, iconType, setIconType }) {
           onClick={() => setSearch('')}
         />
       )}
-      <select onChange={(e) => setIconType(e.target.value)} class="ml-4 flex-1">
-        {Object.keys(IconTypes).map((key, index) => (
-          <option value={key}>{capitalize(key)}</option>
-        ))}
-      </select>
     </div>
   );
 }

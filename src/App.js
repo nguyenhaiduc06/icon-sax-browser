@@ -5,6 +5,7 @@ import Icon from './components/Icon';
 import { IconNames, IconTypes } from './constants/Icons';
 import capitalize from './helpers/capitalize';
 import Search from './components/Search';
+import SelectIconType from './components/SelectIconType';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -13,13 +14,9 @@ function App() {
   return (
     <div class="bg-gray-100 min-h-screen">
       <NavBar />
-      <Search
-        search={search}
-        setSearch={setSearch}
-        iconType={iconType}
-        setIconType={setIconType}
-      />
-      <div class="m-auto max-w-screen-lg bg-white rounded-lg mt-4 p-4">
+      <Search search={search} setSearch={setSearch} />
+      <SelectIconType iconType={iconType} setIconType={setIconType} />
+      <div class="m-auto max-w-screen-lg bg-white rounded-xl mt-4 p-4">
         <div class="grid grid-cols-8 gap-4">
           {IconNames[iconType].map((iconName, index) => (
             <>
